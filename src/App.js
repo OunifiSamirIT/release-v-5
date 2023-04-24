@@ -35,9 +35,12 @@ import Fileapk from "./pages/fileapk";
 import Qr from "./pages/QRCODE"
 import Card from "./pages/Card";
 import UPdate from "./pages/Details";
+import UPdateER from "./pages/DetailsERROR";
 import Info from "./pages/InfoRelease";
 import InfoDetails from "./pages/infodetails";
 import Statstique from "./pages/stastique";
+import ErrorAPK from "./pages/errorAPKdiscription";
+import Error from "./pages/errorpage";
 
 function App() {
   //const [isDarkMode, setIsDarkMode] = useState(false);
@@ -110,10 +113,13 @@ function App() {
 <Route exact path="/Release" component={HomeeeRE} auth={auth}/>
         <Route exact path="/uploadFile" component={UploadFile} auth={auth}/>
         <Route exact path="/Release/:id" component={UPdate} auth={auth}/>
+        <Route exact path="/ReleaseER/:id" component={UPdateER} auth={auth}/>
         <Route exact path="/info/:id" component={Info} auth={auth}/>
         <Route exact path="/qrcode/:id" component={Qr} auth={auth}/>
         <Route exact path="/Android/:id" component={InfoDetails} auth={auth}/>
         <Route exact path="/statstique" component={Statstique} auth={auth}/>
+        <Route exact path="/release/:id/description" component={ErrorAPK} auth={auth}/>
+        <Route exact path="/errorRelease" component={Error} auth={auth}/>
         {/* end */}
 
 
